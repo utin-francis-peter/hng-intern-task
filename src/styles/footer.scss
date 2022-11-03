@@ -1,0 +1,22 @@
+footer {
+  border-top: 1px solid #eaecf0;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+  .footer-inner {
+    .footer-brand {
+      width: 120px;
+    }
+    .footer-text {
+      margin: 1rem 0;
+      color: #667085;
+      font-weight: 400;
+    }
+
+    @media screen and (min-width: 992px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.d-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.avatar {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto;
+}
+
+.btn_lg,
+.btn_sm {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  background: #eaecf0;
+  outline: none;
+  border: none;
+  margin-bottom: 1.5rem;
+  &:hover {
+    background: #d2d3d6;
+  }
+}
+.btn_sm {
+  height: 68px;
+}
+.btn_lg {
+  height: 76px;
+}
