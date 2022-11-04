@@ -82,7 +82,7 @@ const Contact = () => {
             id="email"
             name="email"
             placeholder="yourname@email.com"
-            value={input.lastName}
+            value={input.email}
             onChange={(e) => handleChange(e)}
           />
         </div>
