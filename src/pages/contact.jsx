@@ -8,6 +8,13 @@ const Contact = () => {
     message: "",
   });
 
+  console.log(input);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setInput({ ...input, [name]: value });
+  };
+
   const handleSubmit = () => {
     alert(
       `Congratulations ${input.firstName}. I've received your information and would reach out soonest.`
@@ -46,11 +53,10 @@ const Contact = () => {
               required
               type="text"
               id="first_name"
+              name="firstName"
               placeholder="Enter your first name"
               value={input.firstName}
-              onChange={(e) =>
-                setInput({ ...input, firstName: e.target.value })
-              }
+              onChange={(e) => handleChange(e)}
             />
             <p className="error__message">Please enter your first name</p>
           </div>
@@ -60,9 +66,10 @@ const Contact = () => {
               required
               type="text"
               id="last_name"
+              name="lastName"
               placeholder="Enter your last name"
               value={input.lastName}
-              onChange={(e) => setInput({ ...input, lastName: e.target.value })}
+              onChange={(e) => handleChange(e)}
             />
             <p className="error__message">Please enter your last name</p>
           </div>
@@ -73,9 +80,10 @@ const Contact = () => {
             required
             type="text"
             id="email"
+            name="email"
             placeholder="yourname@email.com"
             value={input.email}
-            onChange={(e) => setInput({ ...input, email: e.target.value })}
+            onChange={(e) => handleChange(e)}
           />
           <p className="error__message">Please enter your email</p>
         </div>
@@ -83,14 +91,12 @@ const Contact = () => {
           <label htmlFor="message">Message</label>
           <textarea
             required
-            name=""
             id="message"
+            name="message"
             rows={4}
             placeholder="Send me a message and I'll reply you as soon as possible..."
             value={input.message}
-            onChange={(e) =>
-              setInput({ ...input, message: e.target.value })
-            }></textarea>
+            onChange={(e) => handleChange(e)}></textarea>
           <p className="error__message">Please enter your message</p>
         </div>
         <div className="d-flex">
