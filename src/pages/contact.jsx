@@ -37,7 +37,7 @@ const Contact = () => {
 
   return (
     <div className="contact__page container">
-      <h1 className="title">Contact Me</h1>
+      <h1 className="title mb-4">Contact Me</h1>
       <p className="title__desc mb-4">
         Hi there, contact me to ask me about anything you have in mind.
       </p>
@@ -82,17 +82,16 @@ const Contact = () => {
             id="email"
             name="email"
             placeholder="yourname@email.com"
-            value={input.email}
+            value={input.lastName}
             onChange={(e) => handleChange(e)}
           />
-          <p className="error__message">Please enter your email</p>
         </div>
         <div>
           <label htmlFor="message">Message</label>
           <textarea
             required
-            id="message"
             name="message"
+            id="message"
             rows={4}
             placeholder="Send me a message and I'll reply you as soon as possible..."
             value={input.message}
