@@ -1,7 +1,7 @@
 const Contact = () => {
   return (
     <div className="contact__page container">
-      <h1 className="title">Contact Me</h1>
+      <h1 className="title mb-4">Contact Me</h1>
       <p className="title__desc mb-4">
         Hi there, contact me to ask me about anything you have in mind.
       </p>
@@ -10,6 +10,7 @@ const Contact = () => {
           <div>
             <label htmlFor="firstName">First name</label>
             <input
+              required
               type="text"
               id="first_name"
               placeholder="Enter your first name"
@@ -18,6 +19,7 @@ const Contact = () => {
           <div>
             <label htmlFor="lastName">Last name</label>
             <input
+              required
               type="text"
               id="last_name"
               placeholder="Enter your last name"
@@ -26,12 +28,18 @@ const Contact = () => {
         </div>
         <div>
           <label htmlFor="email">Email</label>
-          <input type="text" id="email" placeholder="yourname@email.com" />
+          <input
+            required
+            type="text"
+            id="email"
+            placeholder="yourname@email.com"
+          />
         </div>
         <div>
           <label htmlFor="message">Message</label>
           <textarea
-            name=""
+            required
+            name="message"
             id="message"
             rows={4}
             placeholder="Send me a message and I'll reply you as soon as possible..."></textarea>
